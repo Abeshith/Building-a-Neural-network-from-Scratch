@@ -1,4 +1,4 @@
-#Building a Neural Network from Scratch
+# Building a Neural Network from Scratch
 
 This project demonstrates how to create a basic neural network from scratch using Python and NumPy. This implementation avoids high-level libraries for layers, optimizers, and activation functions.
 
@@ -16,9 +16,7 @@ The Iris dataset consists of 150 samples of iris flowers, each with four feature
 - **Usage**: Applied to the weighted sum of inputs to determine the output of a neuron.
 
   **Formula**:
-  \[
-  \sigma(x) = \frac{1}{1 + e^{-x}}
-  \]
+ σ(x) = 1 / (1 + e^(-x))
 
 #### Sigmoid Derivative
 
@@ -26,11 +24,8 @@ The Iris dataset consists of 150 samples of iris flowers, each with four feature
 - **Usage**: Used to adjust weights during training by calculating how much change in the input affects the output.
 
   **Formula**:
-  \[
-  \sigma'(x) = \sigma(x) \cdot (1 - \sigma(x))
-  \]
+ σ'(x) = σ(x) * (1 - σ(x))
 
-  Where \(\sigma(x)\) is the sigmoid function.
 
 #### Softmax Function
 
@@ -38,11 +33,7 @@ The Iris dataset consists of 150 samples of iris flowers, each with four feature
 - **Usage**: Applied to the output layer to obtain class probabilities, allowing the network to predict the class with the highest probability.
 
   **Formula**:
-  \[
-  \text{softmax}(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}
-  \]
-
-  Where \(x_i\) is the score for class \(i\) and the denominator is the sum of exponentials of all class scores.
+ softmax(x_i) = e^(x_i) / Σ_j e^(x_j)
 
 ### 2. Loss Function
 
@@ -52,9 +43,7 @@ The Iris dataset consists of 150 samples of iris flowers, each with four feature
 - **Usage**: Used to evaluate the model’s performance and guide the training process. The goal is to minimize this loss during training.
 
   **Formula**:
-  \[
-  \text{Loss} = -\frac{1}{m} \sum_{i=1}^m \sum_{k=1}^K y_{i,k} \cdot \log(p_{i,k})
-  \]
+Loss = - (1 / m) * Σ_i ( Σ_k y_i,k * log(p_i,k) )
 
   Where:
   - \(m\) is the number of samples,
