@@ -6,6 +6,8 @@ This project demonstrates how to create a basic neural network from scratch usin
 
 The Iris dataset consists of 150 samples of iris flowers, each with four features: sepal length, sepal width, petal length, and petal width. The goal is to classify these flowers into one of three species: setosa, versicolor, or virginica.
 
+_______________________________________________________________________________________________________________________________________________________________________________
+
 ## Functions and Explanations
 
 ### 1. Activation Functions
@@ -34,6 +36,7 @@ The Iris dataset consists of 150 samples of iris flowers, each with four feature
 
   **Formula**:
  softmax(x_i) = e^(x_i) / Σ_j e^(x_j)
+ ____
 
 ### 2. Loss Function
 
@@ -50,6 +53,7 @@ Loss = - (1 / m) * Σ_i ( Σ_k y_i,k * log(p_i,k) )
   - \(K\) is the number of classes,
   - \(y_{i,k}\) is the true label (1 for the correct class, 0 otherwise),
   - \(p_{i,k}\) is the predicted probability for class \(k\).
+____
 
 ### 3. Neural Network Components
 
@@ -67,6 +71,8 @@ Loss = - (1 / m) * Σ_i ( Σ_k y_i,k * log(p_i,k) )
 
 - **Purpose**: Backward propagation calculates the gradients of the loss function with respect to weights and biases. These gradients are used to update the weights and biases to minimize the loss.
 - **Usage**: Performs the backward pass to adjust weights and biases based on the calculated gradients, which helps in improving the model's performance during training.
+
+____
 
 ### 4. Training and Testing
 
